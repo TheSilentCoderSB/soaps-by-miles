@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto" oncontextmenu="return false">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="script.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init("ajjp71vr9Iv1zx5oF");
+      })();
+    </script>
+    <title>😎 Miles's Cool Soaps 😎</title>
+  </head>
+  <body>
+    <header class="container" data-aos="fade-up">
+      <h1>😎 Miles's Cool Soaps 😎</h1>
+    </header>
+    <main class="container">
+      <h2 style="width: 100%" data-aos="fade-up">
+        Order These 🔥Fire🔥 Soaps Now!
+      </h2>
+      <form method="POST" id="usrform">
+        <label for="firstname" data-aos="flip-left">
+          First Name📋
+          <input
+            type="text"
+            id="firstname"
+            name="firstname"
+            placeholder="Ex: Miles..."
+            required
+          />
+        </label>
+        <label for="lastname" data-aos="flip-left">
+          Last Name📋
+          <input
+            type="text"
+            id="lastname"
+            name="lastname"
+            placeholder="Ex: Dawson..."
+            required
+          />
+        </label>
+        <label for="element" data-aos="flip-left">Elements</label>
+        <select id="element" data-aos="flip-left" required>
+          <option>8Ar</option>
+          <option>8Li</option>
+          <option>8Sn</option>
+          <option>8Ca</option>
+          <option>Teacher(don't lie!!!🤨🤨🤨)</option>
+        </select>
+        <label for="lock" data-aos="flip-left">
+          Locker Number🔒
+          <input
+            type="number"
+            id="lock"
+            name="lock"
+            placeholder="Ex: 123"
+            maxlength="4"
+            minlength="2"
+            required
+          />
+        </label>
+        <label for="soaps" data-aos="flip-left" data-aos="flip-left"
+          >🧼Types Of Soaps🧼</label
+        >
+        <select id="soaps" required data-aos="flip-left">
+          <option>Desert🏜️($7)</option>
+          <option>Honey Comb🐝($6)</option>
+          <option>Lavender💜($7)</option>
+          <option>Watermelon🍉($5)</option>
+          <option>Beach🏄‍♂️($7, extra 50¢ for sand)</option>
+        </select>
+        <h3 data-aos="fade-down">
+          How They Would Look Like<mark>(Much Cooler In Person)</mark>:
+        </h3>
+        <div class="container grid">
+          <img src="images/beach.png" alt="beach" data-aos="zoom-out-down" />
+          <img src="images/bee.png" alt="honey comb" data-aos="zoom-out-down" />
+          <img src="images/desert.png" alt="desert" data-aos="zoom-out-down" />
+          <img
+            src="images/lavender.png"
+            alt="lavender"
+            data-aos="zoom-out-down"
+          />
+          <img
+            src="images/watermelon.png"
+            alt="beach"
+            data-aos="zoom-out-down"
+          />
+        </div>
+        <br />
+        <h4>
+          <u>🫧Soaper's Recommendation🫧:</u> Beach is nice beacause it has a
+          <mark>nice marble look</mark>, and if you add sand then you would have
+          <mark>a nice scrub</mark>.
+        </h4>
+        <br />
+        <label for="scents" data-aos="flip-left">
+          Scents 👃
+          <mark>(If there is no such scent, then soaper will inform you)</mark>:
+          <input
+            type="text"
+            id="scents"
+            name="scents"
+            placeholder="Ex: Watermelon Scent, Lavender Scent...(Only 1 please)"
+            required
+          />
+        </label>
+        <label for="custom" data-aos="flip-left">
+          Custom Soaps🧼
+          <textarea
+            name="custom"
+            id="custom"
+            placeholder="Enter custom soap details here...(Optional)"
+            form="usrform"
+          ></textarea>
+        </label>
+        <label for="email" data-aos="flip-left"
+          >Email address(To Share Info About Time And Price)📋</label
+        >
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email address"
+          required
+        />
+        <small data-aos="fade-up"
+          >🤫We'll never share your email with anyone else.🤫</small
+        >
+        <button type="submit" onclick="SendMail()">Submit</button>
+      </form>
+    </main>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
